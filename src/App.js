@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios';
-import Image from './image';
-import Header from './header';
-import Details from './details';
+import Image from './Image/image';
+import Header from './Header/header';
+import Details from './Details/details';
 
 function App() {
   const [data, setData] = useState({})
