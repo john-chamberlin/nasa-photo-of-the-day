@@ -5,6 +5,8 @@ import Image from './Image/image';
 import Header from './Header/header';
 import Details from './Details/details';
 
+// WLXrG8EUe7qufcpUKX1d6i4reuNnwohRpTMcAstc- PERSONALIZED API KEY
+
 function App() {
   const [data, setData] = useState({})
 
@@ -27,7 +29,6 @@ function App() {
       <Header title = {data.title} date = {data.date}/>
       <Image imageUrl = {data.url}/>
       <Details explanation = {data.explanation}/>
-      
     </div>
   );
 }

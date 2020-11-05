@@ -1,5 +1,5 @@
 import React from 'react';
-import './header.css';
+import styled from 'styled-components';
 
 export default function Header(props) {
     const {title, date} = props;
@@ -10,13 +10,25 @@ export default function Header(props) {
 
 
     return (
-        <div className = 'header-container'>
-            <h1 className = 'title'>{title}</h1>
-            <h3 className = 'date'>{date}</h3>
-        </div>
+        <StyledHeader className = 'header-container'>
+            <h1 className = 'potd'>Nasa Photo of the Day: {date}</h1>
+            <h2 className = 'title'>{title}</h2>
+        </StyledHeader>
 
 
 
 
     )
 }
+
+const StyledHeader = styled.div`
+    color:${(pr) => pr.theme.secondaryColor};
+    margin-top: 3rem;
+
+
+    h2 {
+        color: ${(pr) => pr.theme.primaryColor}
+    }
+
+
+`

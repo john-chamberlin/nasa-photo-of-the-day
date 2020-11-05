@@ -1,5 +1,5 @@
 import React from 'react';
-import './details.css';
+import styled from 'styled-components'
 
 export default function Details(props) {
 
@@ -7,12 +7,10 @@ export default function Details(props) {
 
 
     return (
-        <div className = 'details-container'>
+        <StyledDetails className = 'details-container'>
             <h3 className = 'explanation'>Explanation</h3>
             <p className = 'explanation-text'>{explanation}</p>
-
-
-        </div>
+        </StyledDetails>
 
 
 
@@ -24,3 +22,12 @@ export default function Details(props) {
 
 
 }
+
+const StyledDetails = styled.div`
+    width:50%;
+    margin:0 auto;
+
+
+
+
+`

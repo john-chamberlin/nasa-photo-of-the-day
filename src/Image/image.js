@@ -1,6 +1,5 @@
 import React from 'react';
-import './image.css';
-import axios from 'axios';
+import styled from 'styled-components';
 
 
 export default function Image(props) {
@@ -8,15 +7,22 @@ export default function Image(props) {
     const {imageUrl} = props;
 
     return (
-        <div className = 'image-container'>
+        <StyledImage className = 'image-container'>
             <img 
                 alt = 'NASA img of day'
                 src = {imageUrl}
             />
-        </div>
+        </StyledImage>
 
 
     )
 
 
 }
+
+const StyledImage = styled.div`
+    margin: 1rem;
+
+
+
+`
