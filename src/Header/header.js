@@ -11,7 +11,8 @@ export default function Header(props) {
 
     return (
         <StyledHeader className = 'header-container'>
-            <h1 className = 'potd'>Nasa Photo of the Day: {date}</h1>
+            <h1 className = 'potd'>Nasa Photo of the Day</h1>
+            <h3 className = 'date'> {date}</h3>
             <h2 className = 'title'>{title}</h2>
         </StyledHeader>
 
@@ -22,13 +23,8 @@ export default function Header(props) {
 }
 
 const StyledHeader = styled.div`
-    color:${(pr) => pr.theme.secondaryColor};
+    color:${(pr) => pr.theme.tertiaryColor};
     margin-top: 3rem;
-
-
-    h2 {
-        color: ${(pr) => pr.theme.primaryColor}
-    }
 
 
 `

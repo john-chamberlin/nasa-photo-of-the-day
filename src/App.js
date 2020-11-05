@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     const fetchPicture = () => {
-      axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+      axios.get('https://api.nasa.gov/planetary/apod?api_key=WLXrG8EUe7qufcpUKX1d6i4reuNnwohRpTMcAstc')
       .then((res) => {
         console.log(res.data)
         setData(res.data);

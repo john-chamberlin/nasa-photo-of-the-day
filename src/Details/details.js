@@ -8,7 +8,7 @@ export default function Details(props) {
 
     return (
         <StyledDetails className = 'details-container'>
-            <h3 className = 'explanation'>Explanation</h3>
+            <h2 className = 'explanation'>Explanation</h2>
             <p className = 'explanation-text'>{explanation}</p>
         </StyledDetails>
 
@@ -26,6 +26,8 @@ export default function Details(props) {
 const StyledDetails = styled.div`
     width:50%;
     margin:0 auto;
+    color:${(pr) => pr.theme.tertiaryColor};
+    line-height: 1.75;
 
 
 
