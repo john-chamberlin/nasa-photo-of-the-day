@@ -1,13 +1,34 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./App.css";
+import axios from 'axios';
+import Image from './Image/image';
+import Header from './Header/header';
+import Details from './Details/details';
+
+// WLXrG8EUe7qufcpUKX1d6i4reuNnwohRpTMcAstc- PERSONALIZED API KEY
 
 function App() {
+  const [data, setData] = useState({})
+
+  useEffect(() => {
+    const fetchPicture = () => {
+      axios.get('https://api.nasa.gov/planetary/apod?api_key=WLXrG8EUe7qufcpUKX1d6i4reuNnwohRpTMcAstc')
+      .then((res) => {
+        console.log(res.data)
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log('no data! sucks!')
+      })
+    }
+    fetchPicture();
+  }, [])
+
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Header title = {data.title} date = {data.date}/>
+      <Image imageUrl = {data.url}/>
+      <Details explanation = {data.explanation}/>
     </div>
   );
 }
